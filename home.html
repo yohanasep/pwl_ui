@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-body-tertiary sticky-top border-bottom">
+        <div class="container">
+
+            <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="home.html"><img src="assets/img/logo/logo.png" style="width: 8%;" alt="Logo"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-dark nav-link {{request()-> is('kategori/asus') ? 'active' : ''}}" aria-current="page" href="kategori/pemaparan_produk.html">Asus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-dark nav-link {{request()-> is('kategori/asus') ? 'active' : ''}}" aria-current="page" href="kategori/pemaparan_produk.html">Asus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-dark nav-link {{request()-> is('kategori/asus') ? 'active' : ''}}" aria-current="page" href="kategori/pemaparan_produk.html">Lenovo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-dark nav-link {{request()-> is('kategori/asus') ? 'active' : ''}}" aria-current="page" href="kategori/pemaparan_produk.html">HP</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex">
+                    <div class="pt-2">
+                        <a href="user/wishlist.html" class="mx-2 text-decoration-none">
+                            <i class="fa-regular fa-heart" style="color: #000;"></i>
+                        </a>
+                        <a href="user/keranjang.html" class="text-decoration-none">
+                            <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i>
+                        </a>
+                        <a href="login.html" class="ms-2 me-3">
+                            <i class="fa-regular fa-user" style="color: #000;"></i>
+                        </a>
+                    </div>
+
+
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-dark" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- carousel -->
+    <div id="carouselExample">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="kategori/pemaparan_produk.html" class="button-52" role="button" style="position: absolute; top: 80%; right: -2%; transform: translate(-50%, -50%); font-size: calc(6px + 2.0084984vw); text-decoration: none;">
+                    <b>Shop Now</b></a>
+                <img src="assets/img/carousel/2.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+
+    <video autoplay muted loop style="width: 100%; padding-top: 5px;">
+      <source src="https://cdn.coverr.co/videos/coverr-woman-with-blue-nails-typing-on-a-laptop-805/1080p.mp4"
+        type="video/webm">
+    </video>
+
+    <div id="carouselExample">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="kategori/pemaparan_produk.html" class="button-52" role="button" style="position: absolute; top: 80%; left: 19%; transform: translate(-50%, -50%); font-size: calc(8px + 2.0084984vw); text-decoration: none;">
+                    <b>Shop Now</b></a>
+                <img src="assets/img/carousel/4.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="container-fluid pt-1 w-100">
+            <h3 class="container text-center mt-5" style="color: rgb(36, 36, 102);"><b>What's Hot</b></h3>
+        </div>
+
+        <div class="container mt-2 py-5">
+            <!-- WHATS HOT -->
+
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row">
+                                <?php for ($i = 0; $i < 6; $i++) { ?>
+                                <div class="col-6 col-md-3 col-lg-2 col-xl-2">
+                                    <div class="card border-0" style="background: none;">
+                                        <div class="card-body">
+                                            <div class="header d-flex">
+                                                <img src="https://i.pinimg.com/564x/c4/f2/da/c4f2daf54c51c2ae567567156b1bfb79.jpg" class="card-img-top" alt="...">
+                                            </div>
+
+                                            <div class="description mt-2">
+                                                <h5 class="card-title text-center">Card title</h5>
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                                                </p>
+                                                <a href="" style="text-decoration: none;">
+                                                    <b>Lenovo</b></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <?php for ($i = 0; $i < 6; $i++) { ?>
+                                <div class="col-6 col-md-3 col-lg-2 col-xl-2">
+                                    <div class="card border-0" style="background: none;">
+                                        <div class="card-body">
+                                            <div class="header d-flex">
+                                                <img src="https://i.pinimg.com/564x/1a/c6/81/1ac681ab418ea8dfd00e37c3b2580fe1.jpg " class="card-img-top" alt="...">
+
+                                            </div>
+
+                                            <div class="description mt-2">
+                                                <h5 class="card-title text-center">Card title</h5>
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                                                </p>
+                                                <a href="" style="text-decoration: none;">
+                                                    <b>Lenovo</b></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <?php } ?>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div style="background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(214, 231, 241), rgb(209, 237, 255)">
+        <div class="container text-center">
+
+            <!-- category -->
+            <div class="mb-lg-5 pb-lg-5 pb-sm-4"></div>
+            <h3 class="text-center" style="color: rgb(36, 36, 102);"><b>Browse Product Category</b></h3>
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+
+            <div class="card ms-3" style="width: 19rem; border: none; background: none;">
+                <img src="assets/img/kategori/asus.png" class="card-img-top" alt="...">
+                <a href="kategori/pemaparan_produk.html" class="btn button-53" role="button" style="position: absolute; top: 100%; left: 40%; transform: translate(-50%, -50%);">
+                    <b class="button-fs">\ ASUS \</b></a>
+            </div>
+
+            <div class="card ms-3" style="width: 19rem; border: none; background: none;">
+                <img src="assets/img/kategori/acer.png" class="card-img-top" alt="...">
+                <a href="kategori/pemaparan_produk.html" class="btn button-53" role="button" style="position: absolute; top: 100%; left: 45%; transform: translate(-50%, -50%);">
+                    <b class="button-fs">\ ACER \</b></a>
+            </div>
+
+            <div class="card ms-3" style="width: 19rem; border: none; background: none;">
+                <img src="assets/img/kategori/hp.png" class="card-img-top" alt="...">
+                <a href="kategori/pemaparan_produk.html" class="btn button-53" role="button" style="position: absolute; top: 100%; left: 45%; transform: translate(-50%, -50%);">
+                    <b class="button-fs">/ HP /</b></a>
+            </div>
+
+            <div class="card ms-3" style="width: 19rem; border: none; background: none;">
+                <img src="assets/img/kategori/lenovo.png" class="card-img-top" alt="...">
+                <a href="kategori/pemaparan_produk.html" class="btn button-53" role="button" style="position: absolute; top: 100%; left: 50%; transform: translate(-50%, -50%);">
+                    <div class="d-flex"><b class="button-fs">/ LENOVO /</b></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-image: linear-gradient(to bottom, rgb(209, 237, 255), rgb(234, 247, 255), rgb(255, 255, 255))">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="1500 0 1440 160">
+        <path fill="#FFFFFF" fill-opacity="1"
+          d="M0,32L30,64C60,96,120,160,180,192C240,224,300,224,360,213.3C420,203,480,181,540,192C600,203,660,245,720,240C780,235,840,181,900,149.3C960,117,1020,107,1080,122.7C1140,139,1200,181,1260,165.3C1320,149,1380,75,1410,37.3L1440,0L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
+        </path>
+      </svg>
+    </div>
+
+    <div class="container-fluid pt-lg-5">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 text-center mt-5">
+                <h3 class="mt-lg-5 pt-lg-3">Tournament</h3>
+                <p>Conquer esports tournaments and be the champion</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="assets/img/carousel/5.webp" class="w-100" alt="">
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="assets/img/carousel/6.webp" class="w-100" alt="">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 text-center mt-5">
+                <h3 class="mt-lg-5 pt-lg-3">Course</h3>
+                <p>Level up with exclusive courses and all-round stats</p>
+            </div>
+        </div>
+
+        <div class="row pb-5" style="background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(249, 248, 248))">
+            <div class="col-lg-6 col-md-6 col-sm-12 text-center mt-5">
+                <h3 class="mt-lg-5 pt-lg-4">Community</h3>
+                <p>Team with prodigies and veterans to create legacies</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="assets/img/carousel/7.webp" class="w-100" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bg-body-tertiary pt-5 border-top" style="padding: 4%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h5 class="mb-4">Looking for the perfect laptop to fit your needs?</h5>
+                    <p>
+                        Look no further than our selection of high-quality laptops. With a variety of brands and styles to choose from, you're sure to find the perfect laptop to meet your needs. From lightweight models for easy portability to powerful options for high-performance
+                        computing, our laptops offer the latest technology and sleek designs. we are committed to providing you with the best possible shopping experience. That's why we offer a wide variety of laptops from top brands such as ASUS, ACER,
+                        HP, and Lenovo. Our selection includes laptops for every need, whether you're a student, a professional, or a gamer. We understand that choosing the right laptop can be overwhelming, so we've made it easy for you to find the perfect
+                        one.
+
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h5 class="mb-4">What we offer</h5>
+                    <p>
+                        We offer competitive pricing on all of our laptops, so you can get the best value for your money. Plus, with our easy-to-use website, you can shop for your new laptop from the comfort of your own home. Investing in a high-quality laptop is a smart decision,
+                        and we're here to make it easy for you. Shop our selection of laptops today and experience the convenience and power of cutting-edge technology. Our knowledgeable customer service team is available to answer any questions you may
+                        have and help you choose the perfect laptop. So why wait? Browse our selection of laptops today and find the perfect one for you!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bg-dark" style="padding: 2%;">
+        <h6 class="text-white text-center">&copy www.alphalaptops.co.id</h6>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/8c8655eff1.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

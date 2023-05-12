@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Daftar Alamat</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sticky-top">
+        <nav class="navbar navbar-expand-md bg-body-tertiary sticky-top border-bottom">
+            <div class="container">
+
+                <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="home.html"><img src="../assets/img/logo/logo.png" style="width: 8%;" alt="Logo"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-dark nav-link {{request()-> is('kategori/asus') ? 'active' : ''}}" aria-current="page" href="kategori/pemaparan_produk.html">Asus</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-dark nav-link {{request()-> is('kategori/asus') ? 'active' : ''}}" aria-current="page" href="kategori/pemaparan_produk.html">Asus</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-dark nav-link {{request()-> is('kategori/asus') ? 'active' : ''}}" aria-current="page" href="kategori/pemaparan_produk.html">Lenovo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-dark nav-link {{request()-> is('kategori/asus') ? 'active' : ''}}" aria-current="page" href="kategori/pemaparan_produk.html">HP</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex">
+                        <div class="pt-2">
+                            <a href="user/wishlist.html" class="mx-2 text-decoration-none">
+                                <i class="fa-regular fa-heart" style="color: #000;"></i>
+                            </a>
+                            <a href="user/keranjang.html" class="text-decoration-none">
+                                <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i>
+                            </a>
+                            <a href="login.html" class="ms-2 me-3">
+                                <i class="fa-regular fa-user" style="color: #000;"></i>
+                            </a>
+                        </div>
+
+
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-dark" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+    <div class="container my-lg-5 py-5" id="jobs">
+        <div class="row">
+            <div class="col-md-6">
+                <h2><b>Address List</b></h2>
+            </div>
+            <div class="col"><a href="tambah-alamat.html" class="button-54 text-dark text-decoration-none"><i>Add Address</i></a>
+            </div>
+        </div>
+        <hr class="col-md-9">
+        <div class="container py-4">
+            <div class="row pb-2">
+                <h4><b>Default Address</b></h4>
+            </div>
+            <div class="row">
+                <div class="card w-75 mb-3 bg-body-tertiary">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Default Shipping Address</b></h5>
+                        <p>
+                            <span>firstname + lastname</span><br>
+                            <span>street name</span><br>
+                            <span>province, city/regency, district, sub-district, postal code</span><br>
+                            <span>country</span><br><br>
+                            <span><b>telephone number :</b></span><br>
+                        </p>
+
+                        <a class="text-black text-decoration-none" data-bs-toggle="modal" data-bs-target="#changeaddress" href=""><i class="fa-solid fa-pen"></i> &nbsp;Change Shipping Address</a>
+                        <a class="text-black align text-decoration-none ms-5" href=""><i class="fa-solid fa-trash"></i> &nbsp;Delete Shipping Address</a>
+                    </div>
+                    <div class="modal fade" id="changeaddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content ">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel"><b>Edit Address</b> </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <h5><b>Contact Information</b></h5>
+                                        <hr class="col-md-12">
+
+                                        <div class="inputBox col-md-6">
+                                            <label for="firstname" class="form-label">First Name </label>
+                                            <input class="form-control" style="border-color: #AEBDCA ;" type="text" name="firstname" id="firstname" required="required" placeholder="">
+                                        </div>
+                                        <div class="inputBox col-md-6">
+                                            <label for="lastname" class="form-label">Last Name</label>
+                                            <input class="form-control" style="border-color: #AEBDCA ;" type="text" name="lastname" id="lastname" required="required" placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="inputBox col-md-6">
+                                            <label for="telephone" class="form-label">Telephone Number</label>
+                                            <input class="form-control" style="border-color: #AEBDCA ;" type="text" name="telephone" id="telephone" required="required" placeholder="">
+                                        </div>
+                                        <div class="inputBox col-md-6">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input class="form-control" style="border-color: #AEBDCA ;" type="email" name="email" id="email" placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <h5><b>Address</b></h5>
+                                        <hr class="col-md-12">
+                                        <br>
+                                        <div class="inputBox col-md-12">
+                                            <label for="street" class="form-label">Street Name</label>
+                                            <input class="form-control" style="border-color: #AEBDCA ;" type="text" name="street" id="street" required="required" placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="inputBox col-md-6">
+                                            <label for="country" class="form-label">Country</label>
+                                            <select class="form-control " style="border-color: #AEBDCA ;" name="country" id="country">
+                                                    <option value="country">--Choose Country--</option>
+                                                    <optgroup>
+                                                        <option value="indonesia">Indonesia</option>
+                                                    </optgroup>
+                                                </select>
+                                        </div>
+                                        <div class="inputBox col-md-6">
+                                            <label for="province" class="form-label">Province</label>
+                                            <select class="form-control " style="border-color: #AEBDCA ;" name="province" id="province">
+                                                    <option value="province text-center">--Choose Province--</option>
+                                                    <optgroup>
+                                                        <option value="aceh">Aceh</option>
+                                                    </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="inputBox col-md-6">
+                                            <label for="city" class="form-label">City/Regency</label>
+                                            <select class="form-control " style="border-color: #AEBDCA ;" name="city" id="city">
+                                                    <option value="city">--Choose City/Regency--</option>
+                                                    <optgroup>
+                                                        <option value=""></option>
+                                                    </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="inputBox col-md-6">
+                                            <label for="district" class="form-label">District</label>
+                                            <select class="form-control " style="border-color: #AEBDCA ;" name="district" id="district">
+                                                    <option value="district">--Choose District--</option>
+                                                    <optgroup>
+                                                        <option value=""></option>
+                                                    </optgroup>
+                                                </select>
+                                        </div>
+                                        <div class="inputBox col-md-6">
+                                            <label for="subdistrict" class="form-label">Sub-district</label>
+                                            <select class="form-control " style="border-color: #AEBDCA ;" name="subdistrict" id="subdistrict">
+                                                    <option value="subdistrict">--Choose Sub-district--</option>
+                                                    <optgroup>
+                                                        <option value=""></option>
+                                                    </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="inputBox col-md-6">
+                                            <label for="postcode" class="form-label">Postal Code</label>
+                                            <input class="form-control" style="border-color: #AEBDCA ;" type="text" name="postcode" id="postcode" required="required" placeholder="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-primary rounded-pill">Change</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <h4><b>Additional Adrdress Entry</b></h4><br>
+                <div class="col-md-8">
+                    <p>
+                        <h6>You have no additional address entries in the address book.</h6>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="bg-body-tertiary pt-5 border-top" style="padding: 4%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h5 class="mb-4">Looking for the perfect laptop to fit your needs?</h5>
+                    <p>
+                        Look no further than our selection of high-quality laptops. With a variety of brands and styles to choose from, you're sure to find the perfect laptop to meet your needs. From lightweight models for easy portability to powerful options for high-performance
+                        computing, our laptops offer the latest technology and sleek designs. we are committed to providing you with the best possible shopping experience. That's why we offer a wide variety of laptops from top brands such as ASUS, ACER,
+                        HP, and Lenovo. Our selection includes laptops for every need, whether you're a student, a professional, or a gamer. We understand that choosing the right laptop can be overwhelming, so we've made it easy for you to find the perfect
+                        one.
+
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h5 class="mb-4">What we offer</h5>
+                    <p>
+                        We offer competitive pricing on all of our laptops, so you can get the best value for your money. Plus, with our easy-to-use website, you can shop for your new laptop from the comfort of your own home. Investing in a high-quality laptop is a smart decision,
+                        and we're here to make it easy for you. Shop our selection of laptops today and experience the convenience and power of cutting-edge technology. Our knowledgeable customer service team is available to answer any questions you may
+                        have and help you choose the perfect laptop. So why wait? Browse our selection of laptops today and find the perfect one for you!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bg-dark " style="padding: 2%; ">
+        <h6 class="text-white text-center ">&copy www.pengenpintar.co.id</h6>
+        <script src="../asset/css-js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js " integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js "></script>
+        <script src="https://kit.fontawesome.com/8c8655eff1.js " crossorigin="anonymous "></script>
+
+</body>
+
+</html>
