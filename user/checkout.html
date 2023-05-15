@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="asset/css/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-body-tertiary sticky-top border-bottom">
+        <div class="container">
+
+            <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="../home.html"><img src="../assets/img/logo/logo.png" style="width: 8%;" alt="Logo"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-dark nav-link active" aria-current="page" href="../pemaparan_produk.html">Asus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-dark nav-link active" aria-current="page" href="../pemaparan_produk.html">Acer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-dark nav-link active" aria-current="page" href="../pemaparan_produk.html">Lenovo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-dark nav-link active" aria-current="page" href="../pemaparan_produk.html">HP</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex">
+                    <div class="pt-2">
+                        <a href="wishlist.html" class="mx-2 text-decoration-none">
+                            <i class="fa-regular fa-heart" style="color: #000;"></i>
+                        </a>
+                        <a href="keranjang.html" class="text-decoration-none">
+                            <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i>
+                        </a>
+                        <a href="../login.html" class="ms-2 me-3">
+                            <i class="fa-regular fa-user" style="color: #000;"></i>
+                        </a>
+                    </div>
+
+
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-dark" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-lg-3 py-3" id="jobs">
+        <div class="row">
+            <div class="col">
+                <h2><b>CHECKOUT</b></h2>
+            </div>
+        </div>
+        <hr class="col-lg-9">
+
+
+        <div class="row">
+            <div class="d-grid gap-1 col-8" style="height: fit-content;">
+                Silahkan masukkan alamat pengiriman anda
+                <button class="btn btn-outline-secondary" style="border-radius: 0%;" type="button">
+                    <p class="text-start" style="color: black;"> <b>Ayumi Syahirah Harahap | (+62)895-0606-0510 </b> </p>
+                    <p style="text-align: left; color: black;">Jl. Mentari No. 510
+                        SUMATERA UTARA, MEDAN, MEDAN TEMBUNG, INDRA KASIH, 20222
+                    </p>
+                </button>
+                <button class="btn btn-outline-secondary" style="border-radius: 0%;" type="button">
+                    <p class="text-start" style="color: black;" ><b>Yohana Septamia | (+62)821-1811-2508 </b></p>
+                    <p style="text-align: left; color: black;">Jl. Jupintus No. 48
+                        DKI JAKARTA, JAKARTA TIMUR, JATINEGARA, CIPINANG MUARA, 60111
+                    </p>
+                </button> &nbsp; &nbsp;
+                <a href="tambah-alamat.html" class="btn btn-dark btn-lg" style="width: fit-content; border-radius: 0%;">Tambah Alamat</a>
+                <br>
+                <br>
+            </div>
+            <div class="d-grid gap-1 col-8" style="height: fit-content;">
+                Metode pembayaran
+                <button class="btn btn-outline-secondary" style="border-radius: 0%; border-color: black; " type="button">
+                    <p class="text-center" style="color: black;" > <b>CREDIT CARD / DEBIT CARD ONLINE *</b></p>
+                    <p style="color: black;"><img src="../assets/img/produk/credit.png" alt="" style="width:200px; float: left; margin-left: 20px;"> *Pastikan kartu debit berlogo
+                    Mastercard / Visa telah diaktivasi untuk pembelanjaan online</p>
+                </button>
+                <button class="btn btn-outline-secondary" style="border-radius: 0%; border-color: black;" type="button">
+                    <p class="text-center" style="color: black;"  ><b>ONLINE PAYMENT</b></p>
+                    <P><img src="../assets/img/produk/bank.png" alt=""style="width:200px; float: left; margin-left: 20px;">
+                        <img src="../assets/img/produk/ovo.jpg" alt=""style="width:200px; float: left; margin-left: 20px;">
+                        <img src="../assets/img/produk/qriss.jpg" alt=""style="width:200px; float: left; margin-left: 20px;">
+                    </P>
+                    <p style="font-size: x-small; color: black;">*maksimal transaksi untuk QRIS adalah IDR 2.000.000 ,-</p>
+                </button>
+            </div>
+            <!-- FILTER JOBS -->
+            <div class="col-lg-4" style="margin-top: -350px;">
+                <div class="card bg-secondary-subtle border-0 p-3">
+                    <p><b style="font-size: large;">RINGKASAN PESANAN:</b>
+                        <button type="button" class="btn btn-link" style="float: right; font-size: small; color: black;">Edit bag</button></p>
+                    <div class="bg-light p-2">
+                        <p class="border-bottom py-2">2 produk</p>
+
+                        <div class="row border-bottom">
+                            <div class="col">
+                                <p class="text-start"><img src="../assets/img/produk/asus.jpg" alt="" style="width: 100px; float: left;">
+                                    <b> ASUS VIVOBOOK 14X M1403QA RYZEN 5 5600H </b></p>
+                                <p style="margin-left: 100px;">Merk : ASUS
+                                    <br>Warna : HITAM</p>
+                                <P class="text-end">1 x Rp.8.039.000</P>
+                                <p class="text-end">Total Rp.8.039.000</p>
+                            </div>
+                        </div>
+                        <div class="row border-bottom pt-2">
+                            <div class="col">
+                                <p class="text-start"><img src="../assets/img/produk/n1.jpg" alt="" style="width: 100px; float: left;">
+                                    <b>Acer Nitro 5 AN515-57-56ER</b></p>
+                                <p style="margin-left: 100px;">Merk : ACER
+                                    <br>Warna : HITAM </p>
+                                <P class="text-end">1 x Rp.15.499.000</P>
+                                <p class="text-end"><b>Total Rp.15.499.000</b></p>
+                            </div>
+                        </div>
+
+                        <div class="row border-bottom pt-3">
+                            <div class="col">
+                                <p>Pengiriman </p>
+                            </div>
+                            <div class="col">
+                                <p>Gratis</p>
+                            </div>
+                        </div>
+
+                        <div class=" row pt-4 ">
+                            <div class="col ">
+                                <p><b>Total tagihan
+                                    <br> (Termasuk Pajak)
+                                </b></p>
+                            </div>
+                            <div class="col ">
+                                <p><b>Rp25.538.000</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-3">
+                    <a href="detail_pesanan.html" class="w-100 text-center btn btn-dark" style="border-radius: 0px;">Order Now
+                        <i class="fa-solid fa-circle-right"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js " integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js "></script>
+    <script src="https://kit.fontawesome.com/8c8655eff1.js " crossorigin="anonymous "></script>
+
+</body>
+
+</html>
